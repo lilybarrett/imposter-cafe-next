@@ -1,6 +1,7 @@
 import React from "react";
 import Document, { Head, Main, NextScript } from "next/document";
 import { extractCritical } from "emotion-server";
+import NavBar from "../components/nav-bar";
 
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
@@ -25,6 +26,7 @@ export default class MyDocument extends Document {
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
+          <NavBar />
           <Main />
           <NextScript />
         </body>
